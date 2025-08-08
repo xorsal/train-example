@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "src/nr/train_bridge",
+]
+
+
