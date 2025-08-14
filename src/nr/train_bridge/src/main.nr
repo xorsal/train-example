@@ -7,19 +7,10 @@ pub contract Train {
     };
 
     #[derive(Eq, Packable, Serialize, Deserialize)]
-    struct HTLC_Public {
+    pub struct HTLC_Public {
         src_receiver: AztecAddress,
         // Note: if the fields below are commented out, the contract will compile.
         amount: u128,
-        token: AztecAddress,
-        hashlock_high: u128,
-        hashlock_low: u128,
-        secret_high: u128,
-        secret_low: u128,
-        ownership_hash_high: u128,
-        ownership_hash_low: u128,
-        timelock: u64,
-        claimed: u8,
     }
 
     #[public]
