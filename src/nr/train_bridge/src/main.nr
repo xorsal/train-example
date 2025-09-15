@@ -20,16 +20,10 @@ pub contract Train {
         TokenRefunded,
     };
     use aztec::messages::logs::note::encode_and_encrypt_note;
-    use aztec::protocol_types::{
-        address::AztecAddress,
-        traits::{Deserialize, Packable, Serialize}};
-    use aztec::state_vars::{
-        map::Map,
-        private_immutable::PrivateImmutable,
-        SharedMutable
-    };
+    use aztec::protocol_types::{address::AztecAddress, traits::{Deserialize, Packable, Serialize}};
+    use aztec::state_vars::{map::Map, private_immutable::PrivateImmutable, SharedMutable};
     use sha256;
-    
+
     use aztec::macros::{
         functions::{initializer, internal, private, public, utility, view},
         notes::note,

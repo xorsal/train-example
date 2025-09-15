@@ -1,8 +1,5 @@
 use crate::lib::{bytes_to_u128_limbs, u128_limbs_to_bytes};
-use aztec::protocol_types::{
-    address::AztecAddress,
-    traits::{Packable, Serialize},
-};
+use aztec::protocol_types::{address::AztecAddress, traits::{Packable, Serialize}};
 
 #[derive(Serialize)]
 pub struct TokenCommitted {
