@@ -3,7 +3,7 @@ pub contract Train {
     use aztec::{
         macros::{functions::{initializer, public}, storage::storage},
         protocol_types::{address::AztecAddress, traits::{Deserialize, Packable, Serialize}},
-        state_vars::{map::Map, SharedMutable},
+        state_vars::{DelayedPublicMutable, map::Map},
     };
 
     #[derive(Eq, Packable, Serialize, Deserialize)]
@@ -19,7 +19,7 @@ pub contract Train {
 
     #[storage]
     struct Storage<Context> {
-        contracts_public: Map<Field, SharedMutable<HTLC_Public, 180, Context>, Context>,
+        contracts_public: Map<Field, DelayedPublicMutable<HTLC_Public, 180, Context>, Context>,
     }
 
 }
